@@ -5,9 +5,14 @@ import Footer from './components/Footer.jsx';
 import menuData from './data/products.json'; 
 
 const App = () => {
-    const [openSection, setOpenSection] = useState(menuData.length > 0 ? menuData[0].id : null); 
+    // CAMBIO CLAVE: Inicializamos openSection a 'null'
+    // Esto significa que, al inicio, ninguna sección tiene el ID que coincida con el estado,
+    // por lo tanto, todas las secciones aparecerán cerradas.
+    const [openSection, setOpenSection] = useState(null); 
 
     const toggleSection = (id) => {
+        // La lógica del acordeón: si haces clic en una sección ya abierta (openSection === id), 
+        // la cierras (poniendo el estado en null). Si no, abres la nueva sección (id).
         setOpenSection(prevId => prevId === id ? null : id); 
     };
 
@@ -31,6 +36,7 @@ const App = () => {
                         <MenuSection
                             key={section.id}
                             section={section}
+                            // openSection === section.id será 'false' para todas al inicio, ya que openSection es 'null'.
                             isOpen={openSection === section.id}
                             toggleSection={toggleSection}
                         />
