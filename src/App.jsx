@@ -2,24 +2,31 @@ import React, { useState } from 'react';
 import MenuSection from './components/MenuSection.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
-import menuData from './data/products.json'; // Importa los datos
+// Importación de datos (JSON)
+import menuData from './data/products.json'; 
 
+// Este es el componente principal que une toda la aplicación.
 const App = () => {
-    // Estado para manejar qué sección del acordeón está abierta
-    const [openSection, setOpenSection] = useState(menuData[0].id); // Abre la primera por defecto
+    // Estado para manejar qué sección del acordeón está abierta.
+    // Abre la primera sección por defecto al cargar.
+    const [openSection, setOpenSection] = useState(menuData.length > 0 ? menuData[0].id : null); 
 
     const toggleSection = (id) => {
-        setOpenSection(openSection === id ? null : id); // Cierra si ya está abierto, si no, abre el nuevo
+        // Si la sección ya está abierta, la cierra (establece a null).
+        // Si está cerrada, abre la nueva sección.
+        setOpenSection(prevId => prevId === id ? null : id); 
     };
 
     return (
+        // Estilos base para el cuerpo (fondo oscuro y fuente)
         <div className="bg-primary-dark text-gray-100 font-sans min-h-screen flex flex-col">
             <Header />
 
+            {/* Contenido principal, centrado y con ancho limitado */}
             <main className="flex-grow max-w-4xl mx-auto w-full p-4 sm:p-6">
                 
-                {/* Título y Subtítulo Central */}
-                <section className="text-center mb-10">
+                {/* Título de la Aplicación */}
+                <section className="text-center mb-10 pt-4">
                     <h2 className="text-4xl sm:text-5xl font-bold text-white mb-2">
                         Nuestros Manjares
                     </h2>
@@ -34,6 +41,7 @@ const App = () => {
                         <MenuSection
                             key={section.id}
                             section={section}
+                            // Pasa un booleano para indicar si esta sección debe estar abierta
                             isOpen={openSection === section.id}
                             toggleSection={toggleSection}
                         />
