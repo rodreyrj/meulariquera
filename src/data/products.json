@@ -96,4 +96,23 @@
         "subcategories": [
             {
                 "name": "Con Alcohol",
-                "
+                "items": [
+                    {"name": "Mayabe", "price": "350"},
+                    {"name": "Cristal", "price": "350"},
+                    {"name": "Vino", "price": "Varía"}
+                ]
+            },
+            {
+                "name": "Sin Alcohol",
+                "items": [
+                    {"name": "Agua", "price": "250"},
+                    {"name": "Yogurt", "price": "250"},
+                    {"name": "Jugo", "price": "250"},
+                    {"name": "Refresco en pomo", "price": "280"},
+                    {"name": "Refresco enlatado", "price": "280"},
+                    {"name": "Malta", "price": "330"}
+                ]
+            }
+        ]
+    }
+]
