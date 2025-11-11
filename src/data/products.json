@@ -1,0 +1,118 @@
+[
+    {
+        "id": "principales",
+        "category": "Platos Principales",
+        "description": "Nuestras especialidades para el paladar más exigente.",
+        "items": [
+            {"name": "Bistec de cerdo encebollado", "price": "1500"},
+            {"name": "Bistec de cerdo gratinado", "price": "1750"},
+            {"name": "Fajita de cerdo", "price": "1500"},
+            {"name": "Masa de cerdo frita", "price": "1800"},
+            {"name": "Cerdo asado", "price": "1500"},
+            {"name": "Ruedas de pescado fritas", "price": "1500"},
+            {"name": "Filete de pescado", "price": "1800"},
+            {"name": "Enchilado de cangrejo", "price": "1500"},
+            {"name": "Enchilado de pulpo", "price": "1800"},
+            {"name": "Camarón al ajillo", "price": "1800"},
+            {"name": "Camarón enchilado", "price": "1800"}
+        ]
+    },
+    {
+        "id": "completas",
+        "category": "Completas",
+        "description": "Platos que incluyen guarniciones seleccionadas a un precio especial.",
+        "items": [
+            {"name": "Bistec de cerdo (Completa)", "price": "1300"},
+            {"name": "Fajita de cerdo (Completa)", "price": "1300"},
+            {"name": "Cerdo asado (Completa)", "price": "1300"},
+            {"name": "Cangrejo (Completa)", "price": "1500"},
+            {"name": "Enchilado de pulpo (Completa)", "price": "1500"},
+            {"name": "Enchilado de Camarón (Completa)", "price": "1500"}
+        ]
+    },
+    {
+        "id": "hamburguesas",
+        "category": "Hamburguesas",
+        "description": "Clásicas y especiales de la casa, para un bocado delicioso.",
+        "items": [
+            {"name": "Hamburguesa simple", "price": "650"},
+            {"name": "Hamburguesas Gouda", "price": "750"},
+            {"name": "Hamburguesas G-J (Gouda y Jamón)", "price": "850"},
+            {"name": "Hamburguesas big", "price": "1000"},
+            {"name": "Hamburguesas La Riquera (Especial)", "price": "1500"}
+        ]
+    },
+    {
+        "id": "pastapizza",
+        "category": "Pasta y Pizza",
+        "description": "Nuestras deliciosas masas. ¡Pídelas con tus agregados favoritos!",
+        "items": [
+            {"name": "Spaghetti de queso-gouda", "price": "700"},
+            {"name": "Pizza - Gouda", "price": "700"}
+        ],
+        "addonsTitle": "Agregados (Toppings)",
+        "addonsDescription": "Personaliza tu Pizza o Spaghetti.",
+        "addons": [
+            {"name": "Queso gouda", "price": "250"},
+            {"name": "Jamón", "price": "250"},
+            {"name": "Bacon", "price": "250"},
+            {"name": "Chorizo", "price": "250"},
+            {"name": "Atún", "price": "600"},
+            {"name": "Piña", "price": "750"},
+            {"name": "Camarón", "price": "900"},
+            {"name": "Cerdo asado", "price": "750"}
+        ]
+    },
+    {
+        "id": "entrantes",
+        "category": "Entrantes",
+        "description": "Abre el apetito con nuestras tapas y aperitivos.",
+        "items": [
+            {"name": "Picada", "price": "1500"},
+            {"name": "Picada de caballa", "price": "2000"},
+            {"name": "Picada especial", "price": "2500"},
+            {"name": "Bolitas de queso", "price": "700"},
+            {"name": "Croquetas de la casa", "price": "600"},
+            {"name": "Entremex jamón - queso", "price": "700"},
+            {"name": "Entremex jamón - queso - chorizo", "price": "850"},
+            {"name": "Brochetas de la casa", "price": "1400"},
+            {"name": "Papa fritas", "price": "600"}
+        ]
+    },
+    {
+        "id": "guarniciones",
+        "category": "Guarniciones",
+        "description": "El acompañamiento perfecto para tu plato principal.",
+        "items": [
+            {"name": "Congrí", "price": "250"},
+            {"name": "Mariquita (Plátano frito)", "price": "300"},
+            {"name": "Ensalada", "price": "300"}
+        ]
+    },
+    {
+        "id": "bebidas",
+        "category": "Bebidas",
+        "description": "Refresca tu velada con nuestras opciones.",
+        "subcategories": [
+            {
+                "name": "Con Alcohol",
+                "items": [
+                    {"name": "Mayabe", "price": "350"},
+                    {"name": "Cristal", "price": "350"},
+                    {"name": "Vino", "price": "Varía"}
+                ]
+            },
+            {
+                "name": "Sin Alcohol",
+                "items": [
+                    {"name": "Agua", "price": "250"},
+                    {"name": "Yogurt", "price": "250"},
+                    {"name": "Jugo", "price": "250"},
+                    {"name": "Refresco en pomo", "price": "280"},
+                    {"name": "Refresco enlatado", "price": "280"},
+                    {"name": "Malta", "price": "330"}
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos para el separador de puntos */
+.item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.item-name {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    margin-right: 0.5rem;
+}
+.item-name::after {
+    content: "";
+    position: absolute;
+    bottom: 0.2rem;
+    left: 0;
+    right: 0;
+    border-bottom: 2px dotted #555;
+    z-index: 1;
+}
+.item-price {
+    z-index: 2;
+    background-color: #1A1A1A; 
+    padding-left: 0.5rem;
+    font-weight: 700;
+    color: #FFD700;
+}
