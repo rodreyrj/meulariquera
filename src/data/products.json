@@ -1,48 +1,99 @@
-import React, { useState } from 'react';
-import MenuSection from './components/MenuSection.jsx';
-import Header from './components/Header.jsx';
-import Footer from './components/Footer.jsx';
-// Aseguramos que la importación del JSON sea correcta.
-import menuData from './data/products.json'; 
-
-const App = () => {
-    const [openSection, setOpenSection] = useState(menuData.length > 0 ? menuData[0].id : null); 
-
-    const toggleSection = (id) => {
-        setOpenSection(prevId => prevId === id ? null : id); 
-    };
-
-    return (
-        <div className="bg-primary-dark text-gray-100 font-sans min-h-screen flex flex-col">
-            <Header />
-
-            <main className="flex-grow max-w-4xl mx-auto w-full p-4 sm:p-6">
-                
-                <section className="text-center mb-10 pt-4">
-                    <h2 className="text-4xl sm:text-5xl font-bold text-white mb-2">
-                        Nuestros Manjares
-                    </h2>
-                    <p className="text-accent-orange text-lg sm:text-xl font-light">
-                        Descubre el sabor que nos hace únicos.
-                    </p>
-                </section>
-
-                <div className="space-y-6">
-                    {menuData.map((section) => (
-                        <MenuSection
-                            key={section.id}
-                            section={section}
-                            isOpen={openSection === section.id}
-                            toggleSection={toggleSection}
-                        />
-                    ))}
-                </div>
-                
-            </main>
-
-            <Footer />
-        </div>
-    );
-};
-
-export default App;
+[
+    {
+        "id": "principales",
+        "category": "Platos Principales",
+        "description": "Nuestras especialidades para el paladar más exigente.",
+        "items": [
+            {"name": "Bistec de cerdo encebollado", "price": "1500"},
+            {"name": "Bistec de cerdo gratinado", "price": "1750"},
+            {"name": "Fajita de cerdo", "price": "1500"},
+            {"name": "Masa de cerdo frita", "price": "1800"},
+            {"name": "Cerdo asado", "price": "1500"},
+            {"name": "Ruedas de pescado fritas", "price": "1500"},
+            {"name": "Filete de pescado", "price": "1800"},
+            {"name": "Enchilado de cangrejo", "price": "1500"},
+            {"name": "Enchilado de pulpo", "price": "1800"},
+            {"name": "Camarón al ajillo", "price": "1800"},
+            {"name": "Camarón enchilado", "price": "1800"}
+        ]
+    },
+    {
+        "id": "completas",
+        "category": "Completas",
+        "description": "Platos que incluyen guarniciones seleccionadas a un precio especial.",
+        "items": [
+            {"name": "Bistec de cerdo (Completa)", "price": "1300"},
+            {"name": "Fajita de cerdo (Completa)", "price": "1300"},
+            {"name": "Cerdo asado (Completa)", "price": "1300"},
+            {"name": "Cangrejo (Completa)", "price": "1500"},
+            {"name": "Enchilado de pulpo (Completa)", "price": "1500"},
+            {"name": "Enchilado de Camarón (Completa)", "price": "1500"}
+        ]
+    },
+    {
+        "id": "hamburguesas",
+        "category": "Hamburguesas",
+        "description": "Clásicas y especiales de la casa, para un bocado delicioso.",
+        "items": [
+            {"name": "Hamburguesa simple", "price": "650"},
+            {"name": "Hamburguesas Gouda", "price": "750"},
+            {"name": "Hamburguesas G-J (Gouda y Jamón)", "price": "850"},
+            {"name": "Hamburguesas big", "price": "1000"},
+            {"name": "Hamburguesas La Riquera (Especial)", "price": "1500"}
+        ]
+    },
+    {
+        "id": "pastapizza",
+        "category": "Pasta y Pizza",
+        "description": "Nuestras deliciosas masas. ¡Pídelas con tus agregados favoritos!",
+        "items": [
+            {"name": "Spaghetti de queso-gouda", "price": "700"},
+            {"name": "Pizza - Gouda", "price": "700"}
+        ],
+        "addonsTitle": "Agregados (Toppings)",
+        "addonsDescription": "Personaliza tu Pizza o Spaghetti.",
+        "addons": [
+            {"name": "Queso gouda", "price": "250"},
+            {"name": "Jamón", "price": "250"},
+            {"name": "Bacon", "price": "250"},
+            {"name": "Chorizo", "price": "250"},
+            {"name": "Atún", "price": "600"},
+            {"name": "Piña", "price": "750"},
+            {"name": "Camarón", "price": "900"},
+            {"name": "Cerdo asado", "price": "750"}
+        ]
+    },
+    {
+        "id": "entrantes",
+        "category": "Entrantes",
+        "description": "Abre el apetito con nuestras tapas y aperitivos.",
+        "items": [
+            {"name": "Picada", "price": "1500"},
+            {"name": "Picada de caballa", "price": "2000"},
+            {"name": "Picada especial", "price": "2500"},
+            {"name": "Bolitas de queso", "price": "700"},
+            {"name": "Croquetas de la casa", "price": "600"},
+            {"name": "Entremex jamón - queso", "price": "700"},
+            {"name": "Entremex jamón - queso - chorizo", "price": "850"},
+            {"name": "Brochetas de la casa", "price": "1400"},
+            {"name": "Papa fritas", "price": "600"}
+        ]
+    },
+    {
+        "id": "guarniciones",
+        "category": "Guarniciones",
+        "description": "El acompañamiento perfecto para tu plato principal.",
+        "items": [
+            {"name": "Congrí", "price": "250"},
+            {"name": "Mariquita (Plátano frito)", "price": "300"},
+            {"name": "Ensalada", "price": "300"}
+        ]
+    },
+    {
+        "id": "bebidas",
+        "category": "Bebidas",
+        "description": "Refresca tu velada con nuestras opciones.",
+        "subcategories": [
+            {
+                "name": "Con Alcohol",
+                "
