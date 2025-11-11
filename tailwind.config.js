@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  // Asegura que Tailwind escanee todos los archivos JSX y HTML
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -17,6 +18,7 @@ export default {
         serif: ['Georgia', 'serif'],
       },
       boxShadow: {
+        // Sombra sutil con el color de acento
         'custom': '0 4px 6px -1px rgba(255, 215, 0, 0.1), 0 2px 4px -1px rgba(255, 215, 0, 0.06)',
       }
     },
