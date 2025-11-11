@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos personalizados para el separador de puntos */
 .item-row {
     display: flex;
     justify-content: space-between;
