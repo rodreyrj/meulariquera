@@ -2,30 +2,21 @@ import React, { useState } from 'react';
 import MenuSection from './components/MenuSection.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
-// Importación de datos (JSON)
 import menuData from './data/products.json'; 
 
-// Este es el componente principal que une toda la aplicación.
 const App = () => {
-    // Estado para manejar qué sección del acordeón está abierta.
-    // Abre la primera sección por defecto al cargar.
     const [openSection, setOpenSection] = useState(menuData.length > 0 ? menuData[0].id : null); 
 
     const toggleSection = (id) => {
-        // Si la sección ya está abierta, la cierra (establece a null).
-        // Si está cerrada, abre la nueva sección.
         setOpenSection(prevId => prevId === id ? null : id); 
     };
 
     return (
-        // Estilos base para el cuerpo (fondo oscuro y fuente)
         <div className="bg-primary-dark text-gray-100 font-sans min-h-screen flex flex-col">
             <Header />
 
-            {/* Contenido principal, centrado y con ancho limitado */}
             <main className="flex-grow max-w-4xl mx-auto w-full p-4 sm:p-6">
                 
-                {/* Título de la Aplicación */}
                 <section className="text-center mb-10 pt-4">
                     <h2 className="text-4xl sm:text-5xl font-bold text-white mb-2">
                         Nuestros Manjares
@@ -35,13 +26,11 @@ const App = () => {
                     </p>
                 </section>
 
-                {/* Contenedor del Menú Acordeón */}
                 <div className="space-y-6">
                     {menuData.map((section) => (
                         <MenuSection
                             key={section.id}
                             section={section}
-                            // Pasa un booleano para indicar si esta sección debe estar abierta
                             isOpen={openSection === section.id}
                             toggleSection={toggleSection}
                         />
