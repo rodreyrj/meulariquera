@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* --- Estilos para el efecto de línea de puntos --- */
+/* Estilos personalizados para el separador de puntos */
 .item-row {
     display: flex;
     justify-content: space-between;
@@ -15,7 +15,6 @@
     position: relative;
     margin-right: 0.5rem;
 }
-/* La magia de los puntos: crea una línea punteada que va de extremo a extremo */
 .item-name::after {
     content: "";
     position: absolute;
@@ -25,10 +24,9 @@
     border-bottom: 2px dotted #555;
     z-index: 1;
 }
-/* El precio debe tener un fondo para 'tapar' los puntos justo donde empieza el número */
 .item-price {
     z-index: 2;
-    background-color: #1A1A1A; /* Debe coincidir con el color de fondo de primary-dark */
+    background-color: #1A1A1A; 
     padding-left: 0.5rem;
     font-weight: 700;
     color: #FFD700;
